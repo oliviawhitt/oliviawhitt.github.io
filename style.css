@@ -1,18 +1,70 @@
+@font-face {
+    font-family: "AmaticSC Regular";
+    src: url(./fonts/AmaticSC-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Amatic Bold";
+    src: url(./fonts/Amatic-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Caviar Dreams Bold";
+    src: url(./fonts/Caviar_Dreams_Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(./fonts/Caviar_Dreams.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Caviar Dreams Bold Italic";
+    src: url(./fonts/CaviarDreams_BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Caviar Dreams Italic";
+    src: url(./fonts/CaviarDreams_Italic.ttf) format("truetype");
+}
+
+
+
+
 .hidden {
 	display: none;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	background-image: url("./images/bg.jpg")
+}
+
+
+header {
+	box-sizing: border-box;
+	background-color: rgba(47, 46, 46, .66);
+	position:fixed;
+	width:100%;
+	z-index:9999;
+}
+
+
 nav {
+	float: right;
 	height: 58px;
-	width: 100%;
 	overflow: auto;
-	position: fixed;
+	position: relative;
 	z-index: 1;
 }
 
 nav ul {
 	padding: 0;
-	margin: 0;
+	margin-right: 38px;
 	margin-top: 20px;
 	text-align: center;
 }
@@ -41,36 +93,96 @@ li a:hover:not(.active) {
     color: white;
 }
 
+.menu {
+	position:fixed;
+	background-color:rgba(0,0,0,.8);
+	z-index:1;
+	width:100%;
+	height:100%;
+	display: none;
+}
 
-video{
+.closemenu{
+	float: right;
+	display:inline-block;
+	margin: 10px 14px 0 0;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+}
+
+.menu ul {
+	text-align:center;
+	list-style:none;
+	padding:0px;
+	top:25%;
+	position:fixed;
+	width:100%;
+}
+
+.menu ul a {
+	margin: 12px auto;
+	border:1px solid white;
+	padding:8px 0;
+	text-decoration:none;
+	color:white;
+	display:inline-block;
+	width:60%;
+}
+
+.video-container{
+	width: 100%;
+	max-height: 772px;
+	overflow: hidden;
+}
+
+.video-container video {
+	display: block;
+	width: auto;
 	min-width: 100%;
-	min-height: 100%;
-	opacity: 0.4;
-	filter: alpha(opacity=40);
-	bacground-size: cover;
-	background url (./images/Walland.mp4) no-repeat;
-	z-index: -1;
-	position: fixed;
+	height: auto;
 }
 
-.hero {
+.video-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	height:772px;
+	width:100%;
+	background-color: rgba(22,15,85,.42);
+}
+
+.hero h1 {
 	text-align: center;
-	margin: -8px;
-	padding-top: 71px;
+	font-family: "Amatic Bold";
+	font-size: 7em;
+	margin-top: -396px;
+	color: white;
+	z-index: 99999;
 }
 
-.hero img {
-	width: 754px;
+p.intro-text {
+	display: none;
+	width: 628px;
+	text-align: justify;
+	font-size: larger;
+	color: white;
+	font-family: raleway;
+	padding: 157px 450px;
+	background-color: #400411;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	margin: 275px auto 0;
 }
 
 .portfolio {
-	margin: 68px auto 0;
+	margin: 79px auto 0;
 	width: 960px;
 	text-align: center;
 }
 
 .portfolio  h1 {
-	color: white;
+	color: #A3AB3A;
 }
 
 .portfolio a {
@@ -83,44 +195,5 @@ video{
 }
 
 .portfolio h3 a {
-	color: pink;
-}
-
-p.intro-text {
-	display: none;
-	width: 628px;
-	text-align: center;
-	color: white;
-	font-family: raleway;
-	padding: 0px 228px;
-	text-shadow: -3px -1px grey;
-	background-color: grey;
-	opacity: 0.9;
-	filter: alpha(opacity=90);
-	margin: 120px auto;
-}
-
-.about img {
-	width: 100%;
-}
-
-.contact{
-	width: 100%;
-	text-align:center;
-	font-family: raleway;
-	font-weight: bold;
-	text-shadow: -3px -1px grey;
-	color: white;
-	background-color: grey;
-	opacity: 0.9;
-	filter: alpha(opacity=90);
-}
-
-.contact ul {
-	margin: 0;
-}
-
-.contact li{
-	text-decoration:none;
-	list-style-type: none;
+	color: #F77151;
 }
